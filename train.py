@@ -14,10 +14,6 @@ from segment_anything import sam_model_registry
 from trainer import trainer_synapse
 from icecream import ic
 
-# CUDA_VISIBLE_DEVICES="2"  python train.py --root_path ./trainset/train_npz_new_224 --output ./soft2_results/ --split='train'  --batch_size=24 --base_lr=0.0028 --img_size=224 --warmup --dice_param=0.88 --AdamW --max_epochs=250 --stop_epoch=250 ; CUDA_VISIBLE_DEVICES="1,2" python test.py --output_dir ./soft2_results --is_savenii --lora_ckpt ./soft2_results/Synapse_224_pretrain_vit_b_epo250_bs24_lr0.0028/epoch_249.pth --stage='1' 
-
-# CUDA_VISIBLE_DEVICES="1,2"  python train.py --root_path ./trainset/train_npz_new_224 --output ./soft2_results/ --split='train'  --batch_size=24 --base_lr=0.004 --img_size=224 --warmup --dice_param=0.8 --AdamW --max_epochs=250 --stop_epoch=250  &
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str,
                     default='/data/LarryXu/Synapse/preprocessed_data/train_npz', help='root dir for data')
