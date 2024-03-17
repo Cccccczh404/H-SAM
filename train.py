@@ -21,7 +21,7 @@ from icecream import ic
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str,
                     default='/data/LarryXu/Synapse/preprocessed_data/train_npz', help='root dir for data')
-parser.add_argument('--output', type=str, default='/output/sam/results')
+parser.add_argument('--output', type=str, default='/output')
 parser.add_argument('--dataset', type=str,
                     default='Synapse', help='experiment_name')
 parser.add_argument('--list_dir', type=str,
@@ -33,9 +33,9 @@ parser.add_argument('--num_classes', type=int,
 parser.add_argument('--max_iterations', type=int,
                     default=30000, help='maximum epoch number to train')
 parser.add_argument('--max_epochs', type=int,
-                    default=250, help='maximum epoch number to train')
+                    default=300, help='maximum epoch number to train')
 parser.add_argument('--stop_epoch', type=int,
-                    default=250, help='maximum epoch number to train')
+                    default=300, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int,
                     default=24, help='batch_size per gpu')
 parser.add_argument('--n_gpu', type=int, default=2, help='total gpu')
@@ -44,7 +44,7 @@ parser.add_argument('--deterministic', type=int, default=1,
 parser.add_argument('--base_lr', type=float, default=0.005,
                     help='segmentation network learning rate')
 parser.add_argument('--img_size', type=int,
-                    default=512, help='input patch size of network input')
+                    default=224, help='input patch size of network input')
 parser.add_argument('--seed', type=int,
                     default=2345, help='random seed')
 parser.add_argument('--vit_name', type=str,
@@ -58,7 +58,7 @@ parser.add_argument('--warmup_period', type=int, default=250,
                     help='Warp up iterations, only valid whrn warmup is activated')
 parser.add_argument('--AdamW', action='store_true', help='If activated, use AdamW to finetune SAM model')
 parser.add_argument('--module', type=str, default='sam_lora_image_encoder')
-parser.add_argument('--dice_param', type=float, default=0.8)
+parser.add_argument('--dice_param', type=float, default=0.9)
 args = parser.parse_args()
 
 if __name__ == "__main__":
