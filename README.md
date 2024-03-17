@@ -3,7 +3,7 @@
 ## Paper
 
 <b>Unleashing the Potential of SAM for Medical Adaptation via Hierarchical Decoding</b> <br/>
-[Zhiheng Cheng](https://scholar.google.com/citations?hl=zh-CN&user=JUy6POQAAAAJ), [Qingyue Wei](https://profiles.stanford.edu/qingyue-wei), [Hongru Zhu](https://pages.jh.edu/hzhu38/), [Yan Wang](https://wangyan921.github.io/), [Wei Shao](https://swsamleo.github.io/wei_shao.github.io/), and [Yuyin Zhou](https://yuyinzhou.github.io/) <br/>
+[Zhiheng Cheng](https://scholar.google.com/citations?hl=zh-CN&user=JUy6POQAAAAJ), [Qingyue Wei](https://profiles.stanford.edu/qingyue-wei), [Hongru Zhu](https://pages.jh.edu/hzhu38/), [Yan Wang](https://wangyan921.github.io/), [Liangqiong Qu](https://datascience.hku.hk/people/liangqiong-qu/), [Wei Shao](https://swsamleo.github.io/wei_shao.github.io/), and [Yuyin Zhou](https://yuyinzhou.github.io/) <br/>
 CVPR 2024 <br/>
 [paper] | [code](https://github.com/Cccccczh404/H-SAM)
 
