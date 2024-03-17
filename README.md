@@ -31,11 +31,27 @@ Use the train.py file for training models. An example script of is
 ```
 CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz_new_224/ --split='train' --batch_size=8 --base_lr=0.0026 --img_size=224 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_l' --ckpt='checkpoints/sam_vit_l_0b3195.pth'
 ```
+To use the few-shot training strategy with 10% of the training data, please first run the following command to rename the train.txt file.
+```
+mv lists/lists_Synapse/train.txt lists/lists_Synapse/train_full.txt
+```
+Use the randomly generated 10% training list.
+```
+mv lists/lists_Synapse/train_220.txt lists/lists_Synapse/train.txt
+```
+Or generate a new training list by running the following command.
+```
+python preprocess/make_list.py
+```
+An example script under few-shot setting is
+```
+CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz_new_224/ --split='train' --batch_size=8 --base_lr=0.0025 --img_size=224 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_b' --warmup_period 260 --ckpt='checkpoints/sam_vit_b_01ec64.pth'
+```
 
 ## 3. Testing
 Use the test.py file for testing models. An example script is
 ```
-CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse_224_pretrain_vit_l_epo300_bs8_lr0.0026/epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth
+CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse_224_pretrain_vit_l_epo300_bs8_lr0.0026/epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224
 ```
 
 ## Acknowledgement
