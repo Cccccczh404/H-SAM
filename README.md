@@ -45,7 +45,7 @@ python preprocess/make_list.py
 ```
 An example script under few-shot setting is
 ```
-CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz_new_224/ --split='train' --batch_size=8 --base_lr=0.0025 --img_size=224 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_b' --warmup_period 260 --ckpt='checkpoints/sam_vit_b_01ec64.pth'
+CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz_new_224/ --split='train' --batch_size=8 --base_lr=0.0025 --img_size=224 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_b' --ckpt='checkpoints/sam_vit_b_01ec64.pth'
 ```
 
 ## 3. Testing
