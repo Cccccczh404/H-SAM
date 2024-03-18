@@ -17,7 +17,7 @@ from icecream import ic
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str,
                     default='/data2/zhcheng/train_npz_224', help='root dir for data')
-parser.add_argument('--output', type=str, default='/output')
+parser.add_argument('--output', type=str, default='./output')
 parser.add_argument('--dataset', type=str,
                     default='Synapse', help='experiment_name')
 parser.add_argument('--list_dir', type=str,
