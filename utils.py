@@ -133,7 +133,10 @@ def test_single_volume(image, label, net, classes, multimask_output, patch_size=
             net.eval()
             with torch.no_grad():
                 outputs1,outputs2,_,_ = net(inputs, multimask_output, patch_size[0], gt=None, mode='test')
-                output_masks = (outputs1['masks'] + outputs2['masks'])/2
+                if stage == 3:
+                    output_masks = (outputs1['masks'] + outputs2['masks'])/2
+                elif stage == 2:
+                    output_masks = outputs2['masks']
 
                 out = torch.argmax(torch.softmax(output_masks, dim=1), dim=1).squeeze(0)
                 out = out.cpu().detach().numpy()
