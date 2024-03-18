@@ -77,7 +77,7 @@ if __name__ == '__main__':
     parser.add_argument('--vit_name', type=str, default='vit_b', help='Select one vit model')
     parser.add_argument('--rank', type=int, default=5, help='Rank for LoRA adaptation')
     parser.add_argument('--module', type=str, default='sam_lora_image_encoder')
-    parser.add_argument('--stage', type=int, default=2)
+    parser.add_argument('--stage', type=int, default=3)
     parser.add_argument('--mode',  type=str, default='test')
 
     args = parser.parse_args()
