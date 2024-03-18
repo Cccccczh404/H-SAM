@@ -57,7 +57,7 @@ CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse
 Here we also provide pretained H-SAM models under fully-supervised and few-shot settings.
 #### Fully-supervised: https://drive.google.com/file/d/1sgMgNugZSAhh3eC1qNjccZoM4ONTS1EL/view?usp=sharing 
 ```
-CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt full_epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224
+CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt full_epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --stage=2 --img_size=224
 ```
 #### 10% training data: https://drive.google.com/file/d/1A1wqTT_FD6FXzqCj9LNStxT425ZfYpnE/view?usp=sharing
 ```
