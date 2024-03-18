@@ -65,7 +65,7 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', type=str, default='Synapse', help='Experiment name')
     parser.add_argument('--num_classes', type=int, default=8)
     parser.add_argument('--list_dir', type=str, default='./lists/lists_Synapse/', help='list_dir')
-    parser.add_argument('--output_dir', type=str, default='/outputs')
+    parser.add_argument('--output_dir', type=str, default='./outputs')
     parser.add_argument('--img_size', type=int, default=224, help='Input image size of the network')
     parser.add_argument('--input_size', type=int, default=224, help='The input size for training SAM model')
     parser.add_argument('--seed', type=int,default=2345, help='random seed')
