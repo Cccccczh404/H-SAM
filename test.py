@@ -1,6 +1,3 @@
-# CUDA_VISIBLE_DEVICES="2" python test.py --output_dir ./2d_results --is_savenii --lora_ckpt ./train_bala_results/Synapse_224_pretrain_vit_b_epo250_bs24_lr0.0018/epoch_249.pth &
-
-# CUDA_VISIBLE_DEVICES="6,7" python test.py --is_savenii --lora_ckpt ./stage2_results/Synapse_224_pretrain_vit_b_epo500_bs32_lr0.005/epoch_449.pth
 import os
 import sys
 from tqdm import tqdm
@@ -18,10 +15,6 @@ from segment_anything import sam_model_registry
 from datasets.dataset_synapse import Synapse_dataset
 
 from icecream import ic
-
-torch.cuda.is_available()
-# 返回True 接着用下列代码进一步测试
-torch.zeros(1).cuda()
 
 
 class_to_name = {1: 'spleen', 2: 'right kidney', 3: 'left kidney', 4: 'gallbladder', 5: 'liver', 6: 'stomach', 7: 'aorta', 8: 'pancreas'}
