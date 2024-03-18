@@ -53,6 +53,18 @@ Use the test.py file for testing models. An example script is
 ```
 CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse_224_pretrain_vit_l_epo300_bs8_lr0.0026/epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224
 ```
+## 3. Pretrained models
+Here we also provide pretained H-SAM models under fully-supervised and few-shot settings.
+#### Fully-supervised: https://drive.google.com/file/d/1sgMgNugZSAhh3eC1qNjccZoM4ONTS1EL/view?usp=sharing 
+```
+CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt full_epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224
+```
+#### 10% training data: https://drive.google.com/file/d/1A1wqTT_FD6FXzqCj9LNStxT425ZfYpnE/view?usp=sharing
+```
+CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt 220_epoch_299.pth --vit_name='vit_b' --ckpt=checkpoints/sam_vit_b_01ec64.pth --img_size=512
+```
+
+
 
 ## Acknowledgement
 We appreciate the developers of [Segment Anything Model](https://github.com/facebookresearch/segment-anything) and the provider of the [Synapse multi-organ segmentation dataset](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789). Our code of H-SAM is built upon [SAMed](https://github.com/hitachinsk/SAMed), and we express our gratitude to these awesome projects.
