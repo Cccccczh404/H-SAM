@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 
 ## 1. Prepare your datasets and pretained model
-#### 1.1 Please download and unzip the processed [training set] with resolution `224x224` (https://drive.google.com/file/d/1zuOQRyfo0QYgjcU_uZs0X3LdCnAC2m3G/view?usp=share_link), and put it in `<Your folder>`. We also prepare the [training set] with resolution `512x512` (https://drive.google.com/file/d/1F42WMa80UpH98Pw95oAzYDmxAAO2ApYg/view?usp=share_link). The `224x224` version of training set is downsampled from the `512x512` version.
+#### 1.1 Please download Synapse multi-organ CT dataset from the original website (https://www.synapse.org/#!Synapse:syn3193805/wiki/217789) or the preprocessed version (https://drive.google.com/file/d/1zuOQRyfo0QYgjcU_uZs0X3LdCnAC2m3G/view?usp=share_link), unzip the [training set] with resolution `224x224`, and put it in `<Your folder>`. We also prepare the [training set] with resolution `512x512` (https://drive.google.com/file/d/1F42WMa80UpH98Pw95oAzYDmxAAO2ApYg/view?usp=share_link). The `224x224` version of training set is downsampled from the `512x512` version.
 #### 1.2 Please download and unzip the [testset] with resolution `512x512` (https://drive.google.com/file/d/1RczbNSB37OzPseKJZ1tDxa5OO1IIICzK/view?usp=share_link) and put it in the ./testset folder. Then, unzip and delete this file.
 #### 1.3 Please download the pretrained SAM models from the original SAM repository (https://github.com/facebookresearch/segment-anything), and put them in the ./checkpoints folder. 
 #### ViT-B: https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
