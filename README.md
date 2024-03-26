@@ -54,7 +54,7 @@ Use the test.py file for testing models. An example script is
 CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse_224_pretrain_vit_l_epo300_bs8_lr0.0026/epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224
 ```
 ## 3. Pretrained models
-Here we also provide pretained H-SAM models under fully-supervised and few-shot settings.
+Here we also provide pretained H-SAM models on the Synapse dataset under fully-supervised and few-shot settings.
 #### Fully-supervised: https://drive.google.com/file/d/1kS0t7QoVojdVxwzcrso6Tk9kH-Jcvusa/view?usp=sharing 
 ```
 CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt full_epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --stage=2 --img_size=224
