@@ -109,14 +109,6 @@ class MaskDecoder_512(nn.Module):
             img_size=img_size
         )
 
-        # Select the correct mask or masks for output
-        # if multimask_output:
-        #     mask_slice = slice(1, None)
-        # else:
-        #     mask_slice = slice(0, 1)
-        # masks = masks[:, mask_slice, :, :]
-        # iou_pred = iou_pred[:, mask_slice]
-
         # Prepare output
         return masks, iou_pred, attn_out, up_embed
 
@@ -303,7 +295,6 @@ class MaskDecoder2_512(nn.Module):
           torch.Tensor: batched predicted masks
           torch.Tensor: batched predictions of mask quality
         """
-        # image_embeddings = self.neck(image_embeddings.permute(0, 3, 1, 2))
         masks, iou_pred, attn_out = self.predict_masks(
             image_embeddings=image_embeddings,
             image_pe=image_pe,
@@ -315,14 +306,6 @@ class MaskDecoder2_512(nn.Module):
             msk_feat=msk_feat,
             up_embed=up_embed
         )
-
-        # Select the correct mask or masks for output
-        # if multimask_output:
-        #     mask_slice = slice(1, None)
-        # else:
-        #     mask_slice = slice(0, 1)
-        # masks = masks[:, mask_slice, :, :]
-        # iou_pred = iou_pred[:, mask_slice]
 
         # Prepare output
         return masks, iou_pred, attn_out
@@ -354,10 +337,6 @@ class MaskDecoder2_512(nn.Module):
         b, c, h, w = src.shape
 
         # Run the transformer
-        # if mode =='train':
-        #     mask_feat = self.downsample(gt).squeeze(1).flatten(start_dim=1)
-        # else:
-        #     mask_feat = self.downsample(mask_feat).squeeze(1).flatten(start_dim=1)
         if len(mask_feat.shape)==3:
             mask_feat = mask_feat.unsqueeze(0)
         mask_feat = self.softmax(mask_feat).flatten(start_dim=2)
@@ -370,6 +349,7 @@ class MaskDecoder2_512(nn.Module):
         if gt is not None:
             gt_feat = gt.clone()
 
+        # CMAttn noise module
         # if mode =='train':
         #     msk_feat = torch.nn.Dropout(p=0.1, inplace=True)(msk_feat)
         #     gt_feat = gt_feat.resize_(gt_feat.shape[0], h , w).int()
