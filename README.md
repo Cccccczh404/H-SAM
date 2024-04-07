@@ -46,13 +46,13 @@ python preprocess/make_list.py
 ```
 An example script under few-shot setting is
 ```
-CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz_new_224/ --split='train' --batch_size=8 --base_lr=0.0025 --img_size=224 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_b' --ckpt='checkpoints/sam_vit_b_01ec64.pth'
+CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz/ --split='train' --batch_size=8 --base_lr=0.0025 --img_size=512 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_b' --ckpt='checkpoints/sam_vit_b_01ec64.pth'
 ```
 
 ## 3. Testing
 Use the test.py file for testing models. An example script is
 ```
-CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse_224_pretrain_vit_l_epo300_bs8_lr0.0026/epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224
+CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse_224_pretrain_vit_l_epo300_bs8_lr0.0026/epoch_299.pth --vit_name='vit_l' --ckpt=checkpoints/sam_vit_l_0b3195.pth --img_size=224 --stage=3
 ```
 ## 3. Pretrained models
 ```
