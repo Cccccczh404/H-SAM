@@ -61,6 +61,17 @@ CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt outputs/Synapse
 CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt 220_epoch_299.pth --vit_name='vit_b' --ckpt=checkpoints/sam_vit_b_01ec64.pth --stage=3 --img_size=512
 ```
 
+## Citation
+If you find this code useful in your research, please consider citing:
+```bibtex
+@article{cheng2024unleashing,
+  title={Unleashing the Potential of SAM for Medical Adaptation via Hierarchical Decoding},
+  author={Cheng, Zhiheng and Wei, Qingyue and Zhu, Hongru and Wang, Yan and Qu, Liangqiong and Shao, Wei and Zhou, Yuyin},
+  journal={arXiv preprint arXiv:2403.18271},
+  year={2024}
+}
+```
+
 
 
 ## Acknowledgement
