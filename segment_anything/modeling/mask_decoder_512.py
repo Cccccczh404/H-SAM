@@ -248,7 +248,7 @@ class MaskDecoder2_512(nn.Module):
             transformer_dim, iou_head_hidden_dim, self.num_mask_tokens, iou_head_depth
         )
         self.med_sel = nn.Sequential(
-            nn.Linear(9,9),
+            nn.Linear(self.num_mask_tokens,self.num_mask_tokens),
             nn.ReLU()
         )
 
@@ -262,7 +262,7 @@ class MaskDecoder2_512(nn.Module):
         self.norm2 = nn.LayerNorm(1024)
         self.mlp = MLPBlock(1024, 2048)
         self.med_sel = nn.Sequential(
-            nn.Linear(9,1),
+            nn.Linear(self.num_mask_tokens,1),
             nn.ReLU()
         )
         self.softmax = nn.Softmax(dim=1)
