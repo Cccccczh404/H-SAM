@@ -64,10 +64,10 @@ CUDA_VISIBLE_DEVICES="0" python test.py --is_savenii --lora_ckpt 220_epoch_299.p
 ## Citation
 If you find this code useful in your research, please consider citing:
 ```bibtex
-@article{cheng2024unleashing,
+@inproceedings{cheng2024unleashing,
   title={Unleashing the Potential of SAM for Medical Adaptation via Hierarchical Decoding},
   author={Cheng, Zhiheng and Wei, Qingyue and Zhu, Hongru and Wang, Yan and Qu, Liangqiong and Shao, Wei and Zhou, Yuyin},
-  journal={arXiv preprint arXiv:2403.18271},
+  booktitle={CVPR},
   year={2024}
 }
 ```
