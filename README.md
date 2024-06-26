@@ -27,6 +27,8 @@ pip install -r requirements.txt
 #### ViT-B: https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
 #### ViT-L: https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth 
 
+#### 1.4 Please refer to this [README file](./preprocess/README.md) for the detailed instructions corresponding to LA and PROMISE12 dataset
+
 ## 2. Training
 Use the train.py file for training models. An example script of is
 ```
