@@ -5,7 +5,7 @@ import h5py
 f = open('./LA/data/test.list',"r")
 test_split = f.readlines()
 f.close()
-
+os.makedirs(r'./LA/test_vol_h5/', exist_ok=True)
 for i in test_split:
     path = './LA/data/2018LA_Seg_Training Set/' + i[:-1] + '/mri_norm2.h5'
     data = h5py.File(path)
