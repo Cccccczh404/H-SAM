@@ -22,5 +22,5 @@ The following desription provides the operation of data preprocessing for LA dat
 
 ## PROMISE12 dataset
 The following desription provides the operation of data preprocessing for PROMISE12 dataset:
-1. Please download the preprocessed PROMISE12 dataset from .
+1. Please download the preprocessed PROMISE12 dataset from https://drive.google.com/file/d/1Xaj9MuYxaqzA28rq8E3VZe6A9rZI5SvU/view?usp=share_link.
 2. Run [preprocess_PROMISE12.py](preprocess_PROMISE12.py).
