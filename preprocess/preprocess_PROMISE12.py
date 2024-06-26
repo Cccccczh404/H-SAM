@@ -1,4 +1,5 @@
 import numpy as np
+from shutil import copyfile
 
 test_split = ['Case16',
     'Case35',
@@ -17,6 +18,12 @@ train_split = ['Case29',
     'Case05'
     ]
 
+os.makedirs(r'./PROMISE/test_vol/', exist_ok=True) 
+os.makedirs(r'./PROMISE/train_npz/', exist_ok=True)
+
+for i in test_split:
+   copyfile('./PROMISE/all_data_prepro/' + i + '.npy', './PROMISE/test_vol/' + i + '.npy')
+    
 train_list = []
 for i in train_split:
     data = np.load('./PROMISE/all_data_prepro/' + i + '.npy', allow_pickle=True).item()
