@@ -32,6 +32,14 @@ Use the train.py file for training models. An example script of is
 ```
 CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz_new_224/ --split='train' --batch_size=8 --base_lr=0.0026 --img_size=224 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_l' --ckpt='checkpoints/sam_vit_l_0b3195.pth'
 ```
+To train on LA dataset, you can run the following script
+```
+CUDA_VISIBLE_DEVICES="0"  python train.py --root_path <Your folder>/LA/train_npz --output <Your folder>/results/ --split='train' --list_dir  ./lists/lists_LA_fully --dataset LA --num_classes=1 --batch_size=8 --base_lr=0.0026 --img_size=512 --warmup --dice_param=0.9 --AdamW --max_epochs=250 --stop_epoch=250 --ckpt='checkpoints/sam_vit_b_01ec64.pth'
+```
+To train on PROMISE12 dataset, you can run the following script
+```
+CUDA_VISIBLE_DEVICES="0"  python train.py --root_path <Your folder>/PROMISE/train_npz --output <Your folder>/results/ --split='train' --list_dir  ./lists/lists_PROMISE_fully --dataset PROMISE --num_classes=1 --batch_size=8 --base_lr=0.0026 --img_size=512 --warmup --dice_param=0.9 --AdamW --max_epochs=250 --stop_epoch=250 --ckpt='checkpoints/sam_vit_b_01ec64.pth'
+```
 To use the few-shot training strategy with 10% of the training data, please first run the following command to rename the train.txt file.
 ```
 mv lists/lists_Synapse/train.txt lists/lists_Synapse/train_full.txt
@@ -48,7 +56,6 @@ An example script under few-shot setting is
 ```
 CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz/ --split='train' --batch_size=8 --base_lr=0.0025 --img_size=512 --warmup --AdamW --max_epochs=300 --stop_epoch=300 --vit_name='vit_b' --ckpt='checkpoints/sam_vit_b_01ec64.pth'
 ```
-
 ## 3. Testing
 Use the test.py file for testing models. An example script is
 ```
