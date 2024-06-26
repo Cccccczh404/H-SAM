@@ -78,7 +78,6 @@ If you find this code useful in your research, please consider citing:
   year={2024}
 }
 ```
-
 ## Acknowledgement
 We appreciate the developers of [Segment Anything Model](https://github.com/facebookresearch/segment-anything) and the provider of the [Synapse multi-organ segmentation dataset](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789). Our code of H-SAM is built upon [SAMed](https://github.com/hitachinsk/SAMed), and we express our gratitude to these awesome projects.
 
