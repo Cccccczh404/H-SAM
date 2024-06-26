@@ -34,7 +34,7 @@ CUDA_VISIBLE_DEVICES="0,1"  python train.py  --root_path <Your folder>/train_npz
 ```
 To train on LA dataset with only 4 scans, you can run the following script
 ```
-CUDA_VISIBLE_DEVICES="0"  python train.py --root_path='<Your folder>/LA/train_npz' --output='./results/LA_4/' --split='train' --batch_size=8 --base_lr=0.0028 --img_size=512 --warmup --dice_param=0.9 --AdamW --max_epochs=250 --stop_epoch=250  --num_classes=1 --dataset='LA' --list_dir='./lists/lists_LA_4' --ckpt='checkpoints/sam_vit_b_01ec64.pth'
+CUDA_VISIBLE_DEVICES="0"  python train.py --root_path <Your folder>/LA/train_npz --output ./results/LA_4/ --split='train' --batch_size=8 --base_lr=0.0028 --img_size=512 --warmup --dice_param=0.9 --AdamW --max_epochs=250 --stop_epoch=250  --num_classes=1 --dataset='LA' --list_dir='./lists/lists_LA_4' --ckpt='checkpoints/sam_vit_b_01ec64.pth'
 ```
 To train on PROMISE12 dataset with only 3 scans, you can run the following script
 ```
