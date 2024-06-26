@@ -16,6 +16,11 @@ aorta | 8 | 7
 pancreas | 11 | 8
 
 ## LA dataset
-The following desription provides the operation of data preprocessing for LA dataset, corresponding to the operations in [preprocess_LA.py](preprocess_LA.py)
+The following desription provides the operation of data preprocessing for LA dataset:
 1. Please download the LA dataset and related list files from https://github.com/yulequan/UA-MT/tree/master/data.
 2. Run [preprocess_LA.py](preprocess_LA.py).
+
+## PROMISE12 dataset
+The following desription provides the operation of data preprocessing for PROMISE12 dataset:
+1. Please download the preprocessed PROMISE12 dataset from .
+2. Run [preprocess_PROMISE12.py](preprocess_PROMISE12.py).
